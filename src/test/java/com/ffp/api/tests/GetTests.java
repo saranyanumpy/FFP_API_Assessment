@@ -20,16 +20,16 @@ public class GetTests {
             .when()
                 .get("/posts/1");
 
-        // Print full body for debugging
+        // Printing full body 
         String responseBody = response.getBody().asString();
         System.out.println("Actual Body:\n" + responseBody);
 
-        // Apply general response validations (status code, content type, etc.)
+        // response validations
         response.then()
                 .spec(ResponseBuilder.resSpec_Login_200_OK(200))
                 .spec(ResponseBuilder.responseHeaderCheck());
-
-        // Manually assert the body content field to avoid whitespace issues
+// issue faced due to whitespaces so asserting
+        // so manually asserting the body to avoid whitespace issues
         String actualBodyField = response.jsonPath().getString("body");
         String expectedBodyField =
                 "quia et suscipit\n" +

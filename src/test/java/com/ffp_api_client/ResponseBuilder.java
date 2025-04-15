@@ -21,7 +21,6 @@ public class ResponseBuilder {
                 .expectBody("userId", equalTo(1))
                 .expectBody("id", equalTo(1))
                 .expectBody("title", equalTo("sunt aut facere repellat provident occaecati excepturi optio reprehenderit"))
-                // Removed body field match here — now done with Assert
                 .build();
     }
 }
