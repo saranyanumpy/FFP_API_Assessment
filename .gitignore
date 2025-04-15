@@ -1,0 +1,13 @@
+/target/
+/logs/
+/test-output/
+.classpath
+.settings/
+.project
+/bin/
+/test-output/
+/allure-results/
+.DS_Store
+.idea/"src/test/java/NewTest.java" 
+"README.md" 
+".gitignore" 
